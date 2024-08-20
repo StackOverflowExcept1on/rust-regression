@@ -1,0 +1,18 @@
+[package]
+name = "wasm-project"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+name = "wasm_program"
+
+[dependencies]
+orig-project = { package = "wasm-program", path = "../wasm-program", default-features = false }
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+opt-level = "z"
+
+[workspace]
