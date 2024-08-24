@@ -1,0 +1,3 @@
+[toolchain]
+# try nightly-2024-06-{12,13}
+channel = "nightly-2024-06-13"

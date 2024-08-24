@@ -1,6 +1,0 @@
-[toolchain]
-# try nightly-2024-06-{12,13}
-channel = "nightly-2024-06-13"
-components = [ "llvm-tools" ]
-targets = [ "wasm32-unknown-unknown" ]
-profile = "default"

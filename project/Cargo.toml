@@ -1,16 +1,17 @@
 [package]
-name = "wasm-project"
+name = "project"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
-name = "wasm_program"
+name = "program"
 
 [dependencies]
-orig-project = { package = "wasm-program", path = "../wasm-program", default-features = false }
+orig-project = { package = "program", path = "../program", default-features = false }
 
 [profile.release]
+panic = "abort"
 codegen-units = 1
 lto = "fat"
 opt-level = "z"
