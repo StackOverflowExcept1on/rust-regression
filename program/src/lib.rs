@@ -20,7 +20,7 @@ fn my_panic(panic_info: &core::panic::PanicInfo) -> ! {
     let message = unsafe { panic_info.message().unwrap_unchecked() };
     #[rustversion::since(2024-06-12)]
     let message = panic_info.message();
-    let mut debug_msg = ArrayString::<1024>::new();
+    let mut debug_msg = ArrayString::<1024>::new_const();
 
     let _ = write!(&mut debug_msg, "panicked with '{message}'");
 
